@@ -433,10 +433,6 @@ p {
 	padding: 20px 0;
 }
 
-.logo {}
-
-.footer__form {}
-
 .footer__search-box {
 	outline: none;
 	font-size: 14px;
@@ -855,7 +851,7 @@ p {
 
 .catalog-item__text {
 	max-width: 606px;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
 	text-align: left;
@@ -880,7 +876,7 @@ p {
 }
 
 .about-page__inner p {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
 	color: #101010;
@@ -1045,6 +1041,12 @@ p {
 .contacts-page__box-2 {
 	grid-column: 2 / 3;
 	grid-row: 1 / 2;
+	color: #101010;
+	transition: all .4s;
+}
+
+.contacts-page__box-2:hover {
+	color: #A3773A;
 }
 
 .contacts-page__box-3 {
@@ -1181,10 +1183,9 @@ p {
 
 .new-page-item p {
 	color: #101010;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
-
 }
 
 .news-page__item-img {
@@ -1333,10 +1334,13 @@ p {
 /* popup  */
 
 .popup {
-	visibility: visible;
-	opacity: 1;
-	pointer-events: all;
 	position: fixed;
+
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	height: 0;
+
 	top: 0;
 	left: 0;
 	right: 0;
@@ -1350,10 +1354,10 @@ p {
 }
 
 .popup.is--visible {
-	visibility: hidden;
-	opacity: 0;
-	pointer-events: none;
-	height: 0;
+	visibility: visible;
+	opacity: 1;
+	pointer-events: all;
+	height: 100%;
 }
 
 .popup__container {
@@ -1499,7 +1503,8 @@ p {
 	}
 
 	.news-page__item-img {
-		display: none;
+		float: none;
+		padding: 0;
 	}
 }
 
@@ -1715,7 +1720,7 @@ p {
 	}
 
 	.catalog-page__products h2 {
-		font-size: 20px;
+		font-size: 24px;
 		line-height: 26px;
 		color: #101010;
 		margin: 0 0 20px 0;
@@ -1757,8 +1762,16 @@ p {
 		line-height: 20px;
 	}
 
+	.catalog-item__text {
+		font-size: 14px;
+	}
+
 	.catalog-page__products-navigation ul {
 		display: none;
+	}
+
+	.about-page__inner p {
+		font-size: 14px;
 	}
 
 	.about-page__boxes {
@@ -1804,6 +1817,9 @@ p {
 		margin-bottom: 40px;
 	}
 
+	.new-page-item p {
+		font-size: 14px;
+	}
 
 	.modal-window__container {
 		height: auto;
@@ -1836,7 +1852,7 @@ p {
 		line-height: 24px;
 	}
 	.title {
-		font-size: 20px;
+		font-size: 24px;
 		line-height: 26px;
 	}
 	.popup__btns {
@@ -2004,7 +2020,7 @@ p {
 	}
 
 	.catalog-item__box {
-		font-size: 10px;
+		font-size: 14px;
 		line-height: 48px;
 	}
 
@@ -2019,8 +2035,8 @@ p {
 	}
 
 	.catalog-item__right-content p {
-		font-size: 10px;
-		line-height: 16px;
+		font-size: 14px;
+		line-height: 28px;
 	}
 
 	.catalog-item__btn {
@@ -2030,12 +2046,12 @@ p {
 	}
 
 	.catalog-item__text {
-		font-size: 10px;
-		line-height: 16px;
+		font-size: 14px;
+		line-height: 24px;
 	}
 
 	.about-page h2 {
-		font-size: 20px;
+		font-size: 24px;
 		line-height: 26px;
 		margin-bottom: 10px;
 	}
@@ -2051,8 +2067,8 @@ p {
 	}
 
 	.about-page__inner p {
-		font-size: 12px;
-		line-height: 16px;
+		font-size: 14px;
+		line-height: 24px;
 	}
 
 	.about-page__inner h4 {
@@ -2085,7 +2101,7 @@ p {
 	}
 
 	.contacts-page h2 {
-		font-size: 20px;
+		font-size: 24px;
 		font-weight: 400;
 		line-height: 26px;
 	}
@@ -2104,15 +2120,13 @@ p {
 	.contacts-page__boxes {
 		column-gap: 14px;
 		row-gap: 14px;
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 26px;
 	}
 
 	.contacts-page__box h3 {
 		font-size: 12px;
 		line-height: 16px;
-
-
 	}
 
 	.news__right h3 {
@@ -2135,7 +2149,7 @@ p {
 		margin-top: 0;
 	}
 
-	.new-page-item h3 {
+	.new-page-item h4 {
 		font-size: 20px;
 		line-height: 26px;
 		margin-bottom: 10px;
@@ -2149,8 +2163,8 @@ p {
 	}
 
 	.new-page-item p {
-		font-size: 12px;
-		line-height: 18px;
+		font-size: 14px;
+		line-height: 24px;
 	}
 
 	.news-page__item-content p:first-child {
