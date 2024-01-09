@@ -1235,18 +1235,17 @@ p {
 
 input,
 .order__form input,
-.order__form textarea  {
+.order__form textarea {
 	border: 1px solid transparent;
 }
 
 input:focus,
 .order__form input:focus,
-.order__form textarea:focus  {
-	border: 1px solid #D1A465;
+.order__form textarea:focus {
+	border-color: #D1A465;
 }
 
 .order__modal-window.is--visible {
-
 	visibility: visible;
 	opacity: 1;
 	pointer-events: all;
@@ -1290,7 +1289,6 @@ input:focus,
 	padding: 15px 20px;
 	background-color: #f4f4f4;
 	outline: none;
-	border: none;
 	border-radius: 12px;
 
 	font-size: 14px;
@@ -1357,7 +1355,7 @@ input:focus,
 
 
 [type=checkbox]:checked+span:before {
-	content: url(../img/checked.png);
+	content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEzIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDMuNUw1IDcuNUwxMS41IDEiIHN0cm9rZT0iI0EzNzczQiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
 	position: absolute;
 	top: -2px;
 	left: 3px;

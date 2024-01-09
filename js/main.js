@@ -1,22 +1,15 @@
 /* popup-window */
-
 const cookieBox = document.querySelector(".popup");
 const btnAccept = document.getElementById("accept-btn");
 
-
 document.addEventListener("DOMContentLoaded", function () {
-    // Проверяем, существует ли у клиента localStorage
     if (typeof (Storage) !== "undefined") {
-        // Если localStorage существует, проверяем, сохранено ли определенное значение с ключом 'visited'
         if (!localStorage.getItem('visited')) {
-            // Если значение не сохранено, показываем popup окно
-            // Здесь нужно добавить код для вашего popup окна
             cookieBox.classList.add("is-visible");
-            // После того, как пользователь нажмет на кнопку в окне, мы устанавливаем значение в localStorage
             document.getElementById('accept-btn').addEventListener('click', function () {
                 localStorage.setItem('visited', true);
                 var now = new Date().getTime();
-                var ttl = 48 * 60 * 60 * 1000; // 48 часов в миллисекундах
+                var ttl = 48 * 60 * 60 * 1000;
                 var exp = now + ttl;
                 localStorage.setItem('expiration', exp);
 
@@ -57,16 +50,12 @@ const modalFunc = function () {
     document.querySelector('.exit').addEventListener('click', function () {
         modal_window.classList.remove('is--visible');
     });
-
-
 }
 modal_window.addEventListener("click", function (e) {
     if (modal_window.contains(e.target) && !modal_container.contains(e.target)) {
         modal_window.classList.remove('is--visible');
     }
 })
-
-
 modalFunc();
 
 
