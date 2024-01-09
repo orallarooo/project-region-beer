@@ -1233,6 +1233,18 @@ p {
 	transition: all .4s;
 }
 
+input,
+.order__form input,
+.order__form textarea  {
+	border: 1px solid transparent;
+}
+
+input:focus,
+.order__form input:focus,
+.order__form textarea:focus  {
+	border: 1px solid #D1A465;
+}
+
 .order__modal-window.is--visible {
 
 	visibility: visible;
@@ -1298,7 +1310,9 @@ p {
 	font-weight: 300;
 	line-height: 16px;
 	height: 141px;
+	resize: none;
 }
+
 
 .modal-window__bottom {
 	display: flex;
@@ -1325,7 +1339,7 @@ p {
 .accept label {
 	display: flex;
 	gap: 16px;
-	align-items: flex-start;
+	align-items: center;
 }
 
 .accept span {
@@ -1339,6 +1353,8 @@ p {
 	border-radius: 2px;
 	padding: 3px;
 }
+
+
 
 [type=checkbox]:checked+span:before {
 	content: url(../img/checked.png);
